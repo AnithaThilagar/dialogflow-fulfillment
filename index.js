@@ -2,7 +2,7 @@
 
 const express = require('express'),
     bodyParser = require('body-parser'),
-    serviceNow = require('./serviceNow'),
+    //serviceNow = require('./serviceNow'),
 	apiai = require('apiai'),
 	DialogflowApp = require('actions-on-google').DialogflowApp;
 
@@ -31,8 +31,8 @@ app.get('/ai', (req, res) => {
 //To handle the response to bot
 app.post('/ai', (req, res) => {
     console.log("Inside the API handle " + JSON.stringify(req.body));
-    logger.info('Inside Bot request');
-    let source = '';
+    logger.info('Inside Bot request ',req.body);
+    /*let source = '';
     if (typeof req.body.originalRequest != "undefined") {
         logger.info("Platform - "+req.body.originalRequest.source);
         console.log(req.body.originalRequest.source);
@@ -42,5 +42,5 @@ app.post('/ai', (req, res) => {
         console.log('Req from other sources');
         source = 'facebook';//By default send the facebook response
     }
-    handleRequest(req, res, source);
+    handleRequest(req, res, source);*/
 });
