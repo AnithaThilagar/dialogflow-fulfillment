@@ -30,8 +30,7 @@ app.get('/ai', (req, res) => {
 
 //To handle the response to bot
 app.post('/ai', (req, res) => {
-    console.log("Inside the API handle " + JSON.stringify(req.body));
-    logger.info('Inside Bot request ',req.body);
+    console.log("Inside the API handle ", req.body);
     /*let source = '';
     if (typeof req.body.originalRequest != "undefined") {
         logger.info("Platform - "+req.body.originalRequest.source);
